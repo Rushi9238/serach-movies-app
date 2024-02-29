@@ -2,7 +2,7 @@
 
 The MovieDB is a web application that allows users to search for movies and view their details. It utilizes the OMDB API to fetch movie data based on user queries.
 ## Hosted link 
-`git clone https://github.com/Rushi9238/serach-movies-app.git`
+`https://rushi9238.github.io/serach-movies-app/`
 
 ## Features
 - **Search:** Users can search for movies by title or keyword.
