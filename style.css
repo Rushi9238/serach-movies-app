@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "microsoft yahei", arial, -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, cantarell, "helvetica neue", ubuntu, sans-serif;
+  background: #080823;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .miniList {
+  margin-top: 40px;
+  color: #919191;
+}
+.wrapper .search-block {
+  width: 100%;
+  text-align: center;
+  background-color: #080823;
+  position: relative;
+}
+@media (max-width: 520px) {
+  .wrapper .search-block {
+    padding-top: 50px;
+  }
+}
+.wrapper .search-block a {
+  text-decoration: none;
+  color: #fff;
+}
+.wrapper .search-block .searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 520px) {
+  .wrapper .search-block .searchBox {
+    width: 100%;
+  }
+}
+.wrapper .search-block .searchBox .divWrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+@media (max-width: 520px) {
+  .wrapper .search-block .searchBox .divWrapper {
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+  }
+}
+.wrapper .search-block .searchBox input {
+  min-width: 400px;
+  padding: 11px 0;
+  padding-left: 12px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 10px;
+  flex: 1;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 520px) {
+  .wrapper .search-block .searchBox input {
+    min-width: 0;
+    width: 100% !important;
+  }
+}
+.wrapper .search-block .searchBox .btn1 {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: ease-in-out 0.5s;
+  border-radius: 12px;
+  background-color: transparent;
+  flex: 1;
+  font-weight: 700;
+}
+.wrapper .search-block .searchBox .btn1:hover {
+  border: 1px solid transparent;
+  box-shadow: 100px 0px 0px #06c3dd inset, 300px 0px 0px #06c3dd inset, 600px 0px 0px #06c3dd inset;
+}
+.wrapper .search-block .favoBtn {
+  text-align: end;
+  margin-bottom: 20px;
+}
+@media (max-width: 520px) {
+  .wrapper .search-block .favoBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.wrapper .search-block .favoBtn button {
+  padding: 7px 15px;
+  background-color: transparent;
+  border: 1px solid #dfdfe8;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 520px) {
+  .wrapper .search-block .favoBtn button {
+    font-size: 14px;
+  }
+}
+.wrapper .ist .cards {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 100%;
+}
+.wrapper .ist .cards img {
+  height: 100%;
+  width: 100%;
+}
+.wrapper .ist .cards .overlayDiv {
+  transition: ease-in-out 0.5s;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: linear-gradient(180deg, rgba(8, 8, 35, 0.568627451) 25.92%, rgba(8, 8, 35, 0.5568627451) 25.93%, rgba(6, 196, 221, 0.737254902) 70%);
+  width: 100%;
+  height: 60%;
+  opacity: 0;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 5px;
+}
+.wrapper .ist .cards .overlayDiv .movie_name {
+  font-family: "Rubik Doodle Shadow";
+  font-size: 30px;
+  color: #fff;
+  line-height: normal;
+}
+.wrapper .ist .cards .overlayDiv .date,
+.wrapper .ist .cards .overlayDiv .ratings {
+  font-size: 18px;
+  font-family: "Roboto Serif";
+  font-weight: 550;
+}
+.wrapper .ist .cards .overlayDiv button {
+  padding: 6px 40px;
+  background-color: #cb0407;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+.wrapper .ist .cards:hover .overlayDiv {
+  opacity: 1;
+  top: 40%;
+}
+.wrapper .paginationDiv {
+  width: 100%;
+  margin-top: 20px;
+}
+.wrapper .paginationDiv ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.wrapper .paginationDiv ul li {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #06c3dd;
+}
+
+.movieDetailsPage .movieBanner .backGroundImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv {
+  padding: 30px;
+  background: linear-gradient(0deg, #8917c6 12%, rgba(21, 22, 22, 0) 60%, rgba(16, 15, 15, 0) 79%);
+  width: 100%;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv {
+    padding: 15px;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .movieName {
+  font-family: "Rubik Doodle Shadow";
+  font-size: 40px;
+  color: #000;
+  line-height: normal;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .movieName {
+    font-size: 30px;
+    color: #fff;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv {
+    margin-top: 0px;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .date,
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .time {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .date,
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .time {
+    font-size: 15px;
+    color: #fff;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .ratings span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .ratings span {
+    font-size: 15px;
+    color: #fff;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .secondDiv .ratings img {
+  width: 30px;
+  height: 30px;
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .desc {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: "Roboto Serif";
+  color: #000;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .desc {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 0px;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .language {
+  margin-top: 20px;
+  padding: 10px 0;
+  color: #000;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .language {
+    color: #fff;
+    margin-top: 0;
+    padding: 5px 0;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .language span {
+  border-right: 1px solid #919191;
+  padding: 0 20px;
+  font-family: "Roboto Serif";
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .awards {
+  margin-top: 20px;
+  color: #000;
+}
+@media (max-width: 520px) {
+  .movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .awards {
+    margin-top: 10px;
+    color: #fff;
+  }
+}
+.movieDetailsPage .movieBanner .backGroundImg .wrapperDiv .awards img {
+  width: 30px;
+  height: 30px;
+}
+.movieDetailsPage .movieBanner img {
+  height: 400px;
+}
+
+.moviesDetails {
+  margin-top: 30px;
+}
+.moviesDetails h3 {
+  font-family: "Roboto Condensed";
+  font-size: 38px;
+}
+
+.movie-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.movie-table th,
+.movie-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.movie-table th {
+  background-color: #130707;
+  font-weight: bold;
+}
+
+.movie-table tr:nth-child(even) {
+  background-color: #221b1b;
+}
+
+.movie-table td:nth-child(2) {
+  text-align: left;
+}
+
+.backButton {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.backButton button {
+  padding: 10px 40px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}/*# sourceMappingURL=style.css.map */
